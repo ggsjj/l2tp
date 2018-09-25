@@ -14,21 +14,22 @@ OpenVZ 虚拟的 VPS 需要系统内核支持 IPSec 才行。也就是说，母�
 cat /dev/net/tun
 如果返回信息为：cat: /dev/net/tun: File descriptor in bad state 说明正常
 
-如何检测是否支持ppp模块？
+# 如何检测是否支持ppp模块？
 执行命令：
 cat /dev/ppp
 如果返回信息为：cat: /dev/ppp: No such device or address 说明正常
 当然，脚本在安装时也会执行检查，如果不适用于安装，脚本会予以提示。
 
-使用方法：
+# 使用方法：
 root 用户登录后，运行以下命令：
 
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh
 chmod +x l2tp.sh
 ./l2tp.sh
-执行后，会有如下交互界面
 
-L2TP
+# 执行后，会有如下交互界面
+
+ L2TP
 
 Please input IP-Range:
 (Default Range: 192.168.18):
@@ -61,7 +62,7 @@ PSK:teddysun.com
 Press any key to start…or Press Ctrl+c to cancel
 按下任意按键继续，如果想取消安装，请按Ctrl+c键
 
-安装完成后，脚本会执行 ipsec verify 命令并提示如下：
+# 安装完成后，脚本会执行 ipsec verify 命令并提示如下：
 
 If there are no [FAILED] above, then you can connect to your
 L2TP VPN Server with the default Username/Password is below:
@@ -85,20 +86,20 @@ Password:your password
  l2tp -l 列出所有用户名和密码
  l2tp -h 列出帮助信息
 
-其他事项：
+#其他事项：
 1、脚本在安装完成后，已自动启动进程，并加入了开机自启动。
 2、脚本会改写 iptables 或 firewalld 的规则。
 3、脚本安装时，会即时将安装日志写到 /root/l2tp.log 文件里，如果你安装失败，可以通过此文件来寻找错误信息。
 
-使用命令：
-ipsec status （查看 IPSec 运行状态）
-ipsec verify （查看 IPSec 检查结果）
-/etc/init.d/ipsec start|stop|restart|status （CentOS6 下使用）
-/etc/init.d/xl2tpd start|stop|restart （CentOS6 下使用）
-systemctl start|stop|restart|status ipsec （CentOS7 下使用）
-systemctl start|stop|restart xl2tpd （CentOS7 下使用）
-service ipsec start|stop|restart|status （Debian/Ubuntu 下使用）
-service xl2tpd start|stop|restart （Debian/Ubuntu 下使用）
+#使用命令：
+ ipsec status （查看 IPSec 运行状态）
+ ipsec verify （查看 IPSec 检查结果）
+ /etc/init.d/ipsec start|stop|restart|status （CentOS6 下使用）
+ /etc/init.d/xl2tpd start|stop|restart （CentOS6 下使用）
+ systemctl start|stop|restart|status ipsec （CentOS7 下使用）
+ systemctl start|stop|restart xl2tpd （CentOS7 下使用）
+ service ipsec start|stop|restart|status （Debian/Ubuntu 下使用）
+ service xl2tpd start|stop|restart （Debian/Ubuntu 下使用）
 
 
 
