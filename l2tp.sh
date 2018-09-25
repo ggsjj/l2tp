@@ -10,7 +10,7 @@ export PATH
 cur_dir=`pwd`
 
 libreswan_filename="libreswan-3.20"
-download_root_url="http://dl.teddysun.com/files"
+download_root_url="https://github.com/ggsjj/l2tp/blob/master/"
 
 rootness(){
     if [[ $EUID -ne 0 ]]; then
