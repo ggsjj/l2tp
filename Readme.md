@@ -1,5 +1,5 @@
 # 中文
-wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh
+wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/across/master/l2tp.sh
 chmod +x l2tp.sh
 ./l2tp.sh
 
