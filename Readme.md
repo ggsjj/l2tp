@@ -3,7 +3,7 @@
 Debian 8 改内核
 wget http://security-cdn.debian.org/pool/updates/main/l/linux/linux-image-3.16.0-4-amd64_3.16.43-2+deb8u5_amd64.deb && dpkg -i linux-image-3.16.0-4*.deb && apt-get -y remove linux-image-3.16.0-6-amd64 && update-grub && reboot
 
-wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/across/master/l2tp.sh && chmod +x l2tp.sh && ./l2tp.sh
+wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/l2tp/master/l2tp.sh && chmod +x l2tp.sh && ./l2tp.sh
 
 
 锐速
