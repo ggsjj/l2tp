@@ -1,8 +1,16 @@
 # 中文
-wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/across/master/l2tp.sh
-chmod +x l2tp.sh
-./l2tp.sh
 
+Debian 8 改内核
+wget http://security-cdn.debian.org/pool/updates/main/l/linux/linux-image-3.16.0-4-amd64_3.16.43-2+deb8u5_amd64.deb && dpkg -i linux-image-3.16.0-4*.deb && apt-get -y remove linux-image-3.16.0-6-amd64 && update-grub && reboot
+
+wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/across/master/l2tp.sh && chmod +x l2tp.sh && ./l2tp.sh
+
+
+锐速
+
+wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh" && bash /tmp/appex.sh 'install'
+
+#  
 
 基于 OpenVZ 虚拟化技术的 VPS 需要开启TUN/TAP才能正常使用，购买 VPS 时请先咨询服务商是否支持开启 TUN/TAP。
 
