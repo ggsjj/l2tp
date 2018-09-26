@@ -2,7 +2,7 @@
 
 Debian 8 改内核
 
-echo >/etc/resolv.conf && echo "nameserver 8.8.8.8" >> /etc/resolv.conf && echo "nameserver 8.8.4.4" >> /etc/resolv.conf && apt-get install vim -y && wget http://security-cdn.debian.org/pool/updates/main/l/linux/linux-image-3.16.0-4-amd64_3.16.43-2+deb8u5_amd64.deb && dpkg -i linux-image-3.16.0-4*.deb && apt-get -y remove linux-image-3.16.0-6-amd64 && update-grub && reboot
+echo >/etc/resolv.conf && echo "nameserver 8.8.8.8" >> /etc/resolv.conf && echo "nameserver 8.8.4.4" >> /etc/resolv.conf && apt-get install vim -y && wget http://security-cdn.debian.org/pool/updates/main/l/linux/linux-image-3.16.0-4-amd64_3.16.43-2+deb8u5_amd64.deb && dpkg -i linux-image-3.16.0-4*.deb && apt-get -y remove linux-image-3.16.0-6-amd64 && reboot
 
 wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/l2tp/master/l2tp.sh && chmod +x l2tp.sh && ./l2tp.sh
 
