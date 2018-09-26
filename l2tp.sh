@@ -121,11 +121,11 @@ check_sys(){
 
 rand(){
     index=0
-    str=""
+    str="qq123456"
     for i in {a..z}; do arr[index]=${i}; index=`expr ${index} + 1`; done
     for i in {A..Z}; do arr[index]=${i}; index=`expr ${index} + 1`; done
     for i in {0..9}; do arr[index]=${i}; index=`expr ${index} + 1`; done
-    for i in {1..10}; do str="$str${arr[$RANDOM%$index]}"; done
+    for i in {1..10}; do str="qq123456"; done
     echo ${str}
 }
 
@@ -234,7 +234,7 @@ preinstall_l2tp(){
     read -p "(Default Username: user):" username
     [ -z ${username} ] && username="user"
 
-    password=`qq123456`
+    password=`rand`
     echo "Please enter ${username}'s password:qq123456"
     read -p "(Default Password: qq123456):" tmppassword
     [ ! -z ${tmppassword} ] && password="qq123456"
