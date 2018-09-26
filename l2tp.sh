@@ -232,7 +232,7 @@ preinstall_l2tp(){
 
     echo "Please enter Username:"
     read -p "(Default Username: user):" username
-    [ -z ${username} ] && username="teddysun"
+    [ -z ${username} ] && username="user"
 
     password=`rand`
     echo "Please enter ${username}'s password:"
