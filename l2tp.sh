@@ -235,7 +235,7 @@ preinstall_l2tp(){
     [ -z ${username} ] && username="user"
 
     password=`rand`
-    echo "Please enter ${username}'s password:"
+    echo "Please enter ${username}'s password:qq123456"
     read -p "(Default Password: qq123456):" tmppassword
     [ ! -z ${tmppassword} ] && password="qq123456"
 
