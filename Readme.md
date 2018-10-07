@@ -32,9 +32,7 @@ cat /dev/ppp
 # 使用方法：
 root 用户登录后，运行以下命令：
 
-wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh
-chmod +x l2tp.sh
-./l2tp.sh
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh && chmod +x l2tp.sh && ./l2tp.sh
 
 # 执行后，会有如下交互界面
 
