@@ -11,7 +11,9 @@ wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/l2tp/master/
 
 wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh" && bash /tmp/appex.sh 'install'
 
-# ubuntu16.04修改网卡名称enp2s0为eth0
+# ubuntu16.04修改网卡名称enp2s0为eth0<当安装不了查看网卡名称>
+
+ifconfig
 
 1、vim /etc/default/grub 
 
