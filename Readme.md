@@ -11,7 +11,35 @@ wget --no-check-certificate https://raw.githubusercontent.com/ggsjj/l2tp/master/
 
 wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh" && bash /tmp/appex.sh 'install'
 
-#  
+# ubuntu16.04修改网卡名称enp2s0为eth0
+
+1、vim /etc/default/grub 
+
+
+```bash
+找到GRUB_CMDLINE_LINUX=""
+改为GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+然后sudo grub-mkconfig -o /boot/grub/grub.cfg
+重启后，网卡名称果然变成了eth0和wlan01234
+```
+
+2、打开ubuntu的/etc/network/interfaces文件默认的内容如下：
+
+
+```bash
+auto lo
+iface lo inet loopback12
+```
+
+在后面添加内容 
+1、获取动态配置：
+
+
+```bash
+auto eth0
+iface eth0 inet dhcp
+```
+
 
 基于 OpenVZ 虚拟化技术的 VPS 需要开启TUN/TAP才能正常使用，购买 VPS 时请先咨询服务商是否支持开启 TUN/TAP。
 
